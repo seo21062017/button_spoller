@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 * {
   padding: 0;
   margin: 0;
@@ -10573,6 +10575,283 @@ readers do not read off random characters that represent icons */
 
 .block__title.active:after {
   transform: rotate(40deg);
+}
+
+.wrapper__shape {
+  margin: 150px 0 0 50px;
+}
+
+.square {
+  width: 150px;
+  height: 150px;
+  background: green;
+}
+
+.rectangle {
+  width: 300px;
+  height: 150px;
+  background: green;
+}
+
+.circle {
+  width: 150px;
+  height: 150px;
+  background: green;
+  border-radius: 50%;
+}
+
+.oval {
+  width: 300px;
+  height: 150px;
+  background: green;
+  border-radius: 50%;
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid green;
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-top: 100px solid green;
+}
+
+.triangle-left {
+  width: 0;
+  height: 0;
+  border-right: 100px solid green;
+  border-bottom: 50px solid transparent;
+  border-top: 50px solid transparent;
+}
+
+.triangle-left:hover {
+  border-right: 100px solid red;
+  cursor: pointer;
+}
+
+.triangle-right {
+  width: 0;
+  height: 0;
+  border-left: 100px solid green;
+  border-bottom: 50px solid transparent;
+  border-top: 50px solid transparent;
+}
+
+.parallelogram {
+  width: 300px;
+  height: 150px;
+  background: green;
+  transform: skew(20deg);
+}
+
+.trapezoid {
+  width: 200px;
+  border-bottom: 100px solid green;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+}
+
+/* Слайдер */
+
+.slider {
+  padding: 0 60px;
+  background: rgba(0, 0, 0, 0.76);
+  position: relative;
+}
+
+.slider .slick-arrow.slick-next {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  right: 0;
+  width: 30px;
+  height: 60px;
+  margin: -30px 0 0 0;
+  background: url("../img/sl-arrow_r.svg") 0 0/100% no-repeat;
+  font-size: 0;
+}
+
+.slider .slick-arrow.slick-prev {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  left: 0;
+  width: 30px;
+  height: 60px;
+  margin: -30px 0 0 0;
+  background: url("../img/sl-arrow_l.svg") 0 0/100% no-repeat;
+  font-size: 0;
+}
+
+.slider .slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider .slick-dots li {
+  margin: 0 5px;
+}
+
+.slider .slick-dots li button {
+  font-size: 0;
+  width: 10px;
+  height: 10px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* Слайд активный (показывается) */
+
+.slider .slick-dots li.slick-active button {
+  background: transparent;
+  border: #5ebe31 solid 1px;
+}
+
+/* Слайдер запущен */
+
+/* Слайдер с точками */
+
+/* Ограничивающая оболочка */
+
+.slick-list {
+  overflow: hidden;
+}
+
+/* Лента слайдов */
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Слайд */
+
+/* Слайд активный (показывается) */
+
+/* Слайд основной */
+
+/* Слайд по центру */
+
+/* Клонированный слайд */
+
+/* Стрелка */
+
+/* Стрелка влево */
+
+/* Стрелка вправо */
+
+/* Стрелка не активная */
+
+/* Точки (булиты) */
+
+/* Активная точка */
+
+/* Элемент точки */
+
+.slider-big__item {
+  text-align: center;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.tabs {
+  margin: 0 0 50px 0;
+}
+
+.tabs__items {
+  display: flex;
+}
+
+.tabs__item {
+  flex: 0 1 33.333%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.tabs__item span {
+  position: relative;
+  z-index: 2;
+}
+
+.tabs__block {
+  position: relative;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 24px;
+  display: none;
+}
+
+.tabs__block:nth-child(1) {
+  background: #d07373;
+}
+
+.tabs__block:nth-child(1):before {
+  background: #d07373;
+  left: 0;
+}
+
+.tabs__block:nth-child(2) {
+  background: #648654;
+}
+
+.tabs__block:nth-child(2):before {
+  background: #648654;
+  left: 33.333%;
+}
+
+.tabs__block:nth-child(3) {
+  background: #556bb4;
+}
+
+.tabs__block:nth-child(3):before {
+  background: #556bb4;
+  right: 0;
+}
+
+.tabs__block:target {
+  display: block;
+}
+
+.tabs__block:before {
+  content: "";
+  height: 50px;
+  width: 33.333%;
+  position: absolute;
+  top: -50px;
+}
+
+.text {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+@media (max-width: 600px) {
+  .tabs__item span {
+    display: block;
+    width: 100px;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    font-size: 14px;
+    text-overflow: ellipsis;
+    padding: 0 5px;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
